@@ -2,11 +2,11 @@ const mongoose =require('mongoose')
 
 const SchemaRegister = new mongoose.Schema({
     name:{
-        type:String,require:true,
+        type:String,
     },
     email : String,
     password : String,
-    gender : String,
+    nama : String,
     address : String,
     skill : String,
     motto : {
