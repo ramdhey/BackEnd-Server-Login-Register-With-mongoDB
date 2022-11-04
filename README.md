@@ -1,3 +1,3 @@
 # BackEnd-Server-Login-Register-With-mongoDB
 
-API : https://regisloginappmongo.herokuapp.com
+API : https://regisloginappmongo.herokuapp.com/
