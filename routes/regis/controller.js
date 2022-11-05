@@ -105,10 +105,10 @@ module.exports={
       // Jika member register ada maka harus dibuatkan jwtnya
       if(peopleRegister){
         // Apakah password yang di hash dengan password yang diinput sesuai dengan compare untuk membandingkan password yang sudah di hash dengan passowrdnya diinput 
-        const pass = bcrypt.compareSync(req.body.password, peopleRegister.password)
+        const password = bcrypt.compareSync(req.body.password, peopleRegister.password)
 
         // Jika passwordnya benar
-        if(pass){
+        if(password){
           const token = jwt.sign(peopleRegister.toObject(), process.env.SECRET_KEY)
           // Jika berhasil dibuatkan token maka munculkan
           res.json({

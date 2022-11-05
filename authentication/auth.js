@@ -11,11 +11,11 @@ module.exports={
         const authHeader = req.headers.authorization
         console.log("Header ",authHeader)
 
-        const token = authHeader.split('')[1]
-        console.log("Token nya Ini ")
+        const token = authHeader.split(' ')[1]
+        console.log("katakunci",token)
 
         //jika token null atau tidak ada maka muncul pemberitahuan "Missing Token"
-        if(token==null)return res.json("Missing Token")
+        if(token == null)return res.json("Missing Token")
 
 
         try {
@@ -26,7 +26,7 @@ module.exports={
 
             //eksekusi lanjutan jika token valid
             if(TokenisValid){
-                let(password, ...rest) = TokenisValid
+                let{password,...rest} = TokenisValid
                 req.body=rest
                 next()
             }
